@@ -34,11 +34,8 @@ body {
 
 /* Images */
 
-.inicio-img img {
-    width: 100%;
-    margin: 12% 0% 0% 0%;
 
-}
+
 
 .colecao-img img {
     width: 100%;
@@ -349,8 +346,17 @@ body {
 .cota {
     position: relative;
     width: 100%;
-    margin: 22% 0% 10% 22%;
+    margin: 22% 0% 10% 10%;
     padding: 0% 0% 0% 1%;
+    align-items: center;
+}
+
+.cota img {
+    margin: 10% 10% 10% 10%;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .edit {
@@ -391,6 +397,37 @@ h4 {
     margin: 7%;
 }
 
+.inicio {
+    position: relative;
+}
+
+.inicio img {
+    position: relative;
+    width: 100%;
+    margin: 12% 0% 0% 0%;
+    height: auto;
+}
+
+.inicio .btnanc {
+    position: absolute !important;
+    width: 70%;
+    bottom: 22.5%;
+    left: 50%;
+    margin: 10% auto;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    color: white;
+    font-size: x-large;
+    font-family: sans-serif;
+    padding: 12% 3% 3% 3%;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 40px;
+    z-index: 4;
+}
+
 .footer {
     position: relative;
     width: 100%;
@@ -403,7 +440,7 @@ h4 {
 }
 
 .footer .btn {
-    position: absolute;
+    position: absolute !important;
     width: 70%;
     top: 34.5%;
     left: 50%;
@@ -419,6 +456,7 @@ h4 {
     cursor: pointer;
     text-align: center;
     border-radius: 40px;
+    z-index: 4;
 }
 
 /* media */
@@ -490,7 +528,6 @@ h4 {
     margin-top: 9%;
     align-items: center;
 }
-
 
 .sidebar2 {
     color: #f1f1f1;

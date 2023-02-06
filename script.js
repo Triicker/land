@@ -39,9 +39,20 @@ function closeNav2() {
     document.getElementById("main").style.marginLeft = "0";
 }
 
-function salve() {
-    alert("Hello World");
+function whatsApp() {
+    alert("Link de contato");
 }
 
+function anChor() {
+    alert("Ancora");
+}
+
+var $doc = $('html, body');
+$('a').click(function () {
+    $doc.animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+    }, 500);
+    return false;
+});
 
 
