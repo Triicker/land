@@ -1,0 +1,165 @@
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+        list-style: none;
+        text-decoration: none;
+
+        font-size: larger;
+
+    }
+
+    html,
+    body {
+        height: 100%;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        position: relative;
+        background-color: black;
+    }
+
+    h1 {
+        margin-bottom: 20px;
+        margin-top: 50px;
+        color: #fff;
+    }
+
+    .dropdown {
+        width: 90%;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        padding: 20px;
+
+    }
+
+    button {
+
+        border-radius: 0;
+        padding: 10px 20px;
+        background-color: #2d5312;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        position: absolute;
+        /* Adicionado para posicionar o botão */
+        bottom: 0;
+        /* Fixa o elemento na parte inferior */
+        left: 0;
+        /* Alinha o elemento à esquerda */
+        width: 100%;
+        /* Faz o botão ocupar toda a largura do container */
+
+    }
+
+
+    /* Define a borda arredondada, cor de fundo e cor do texto para os inputs do dropdown */
+    .dropdown select.form-control {
+        border-radius: 50px;
+        background-color: #28a745;
+        color: white;
+        text-align: center;
+        font-weight: 800;
+    }
+
+    .dropdown select:focus {
+        background-color: #00593C;
+    }
+
+
+    /* Define o botão como quadrado, com borda arredondada e largura de 100% */
+    button.btn.btn-primary.btn-lg {
+        background-color: #28a745;
+        width: 100%;
+        font-weight: 800;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 90px;
+        padding: 0 5px;
+    }
+
+</style>
+<!DOCTYPE html>
+<html lang="Pt-br">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/edc0ec95f2.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.2.4/pdfobject.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top">
+        <a class="navbar-brand" href="livros.html">
+            <i class="fa fa-fw fa-angle-left" aria-hidden="true"></i></a>
+    </nav>
+    <div class="container">
+        <h1>Livros</h1>
+        <div class="dropdown">
+            <select class="form-control" id="disciplina">
+                <option>Português</option>
+                <option>Matematica</option>
+                <option>Ciências</option>
+            </select>
+        </div>
+        <div class="dropdown">
+            <select class="form-control">
+                <option>1º ANO</option>
+                <option>2º ANO</option>
+                <option>3º ANO</option>
+                <option>4º ANO</option>
+                <option>5º ANO</option>
+                <option>6º ANO</option>
+                <option>7º ANO</option>
+                <option>8º ANO</option>
+                <option>9º ANO</option>
+            </select>
+        </div>
+        <div class="dropdown">
+            <select class="form-control">
+                <option>1º TRIMESTRE</option>
+                <option>2º TRIMESTRE</option>
+                <option>3º TRIMESTRE</option>
+            </select>
+        </div>
+        <button class="btn btn-primary btn-lg">Acessar livro</button>
+    </div>
+</body>
+
+<div id="pdfViewer"></div>
+
+</html>
+<script>
+    $(document).ready(function () {
+        $("button").click(function () {
+            var disciplina = $("#disciplina").val();
+            var url;
+            if (disciplina === "Português") {
+                url = "pdfviewerP.html";
+            } else if (disciplina === "Matematica") {
+                url = "pdfviewerM.html";
+            } else if (disciplina === "Ciências") {
+                url = "pdfviewer.html";
+            }
+            window.location.replace(url);
+        });
+    });
+</script>

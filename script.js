@@ -47,12 +47,29 @@ function anChor() {
     alert("Ancora");
 }
 
-var $doc = $('html, body');
-$('a').click(function () {
-    $doc.animate({
-        scrollTop: $($.attr(this, 'href')).offset().top
-    }, 500);
-    return false;
+
+
+document.querySelector('form').addEventListener('submit', function (event) {
+    event.preventDefault(); // Interrompe a submissão do formulário
+
+    var senha = document.querySelector('input[name="senha"]').value;
+
+    if (senha === '1234') {
+        alert('Senha correta!'); // Mostra um alerta de sucesso
+        window.location.replace("livros.html");
+    } else {
+        alert('Senha incorreta!'); // Mostra um alerta de erro
+    }
 });
 
 
+
+function iniciarCarousel() {
+    $('#isso').carousel({
+        interval: 1000 // Tempo de duração de cada slide em milissegundos
+    });
+}
+
+$(document).ready(function () {
+    iniciarCarousel(); // Inicia o carrossel quando a página carrega
+});

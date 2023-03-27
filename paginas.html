@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Livro</title>
+    <!-- Adicione a linha abaixo para importar os estilos do Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- Adicione a linha abaixo para importar os scripts do Bootstrap -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+        /* Você pode manter as suas classes personalizadas */
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            margin-top: 50px;
+        }
+
+        .dropdown {
+            border-radius: 10px;
+            padding: 5px;
+            margin-bottom: 10px;
+            background-color: #040c0f;
+            border-radius: 25px;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            border-radius: 10px;
+            padding: 10px 20px;
+            background-color: #008CBA;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Livros</h1>
+        <div class="dropdown">
+            <select class="form-control">
+                <option>Lingua Portuguesa</option>
+                <option>Matematica</option>
+                <option>Ciências</option>
+                <option>História</option>
+            </select>
+        </div>
+        <div class="dropdown">
+            <select class="form-control">
+                <option>1 ANO</option>
+                <option>2 ANO</option>
+                <option>3 ANO</option>
+                <option>4 ANO</option>
+                <option>5 ANO</option>
+                <option>6 ANO</option>
+                <option>7 ANO</option>
+                <option>8 ANO</option>
+                <option>9 ANO</option>
+            </select>
+        </div>
+        <div class="dropdown">
+            <select class="form-control">
+                <option>1º TRIMESTRE</option>
+                <option>2º TRIMESTRE</option>
+                <option>3º TRIMESTRE</option>
+            </select>
+        </div>
+        <button class="btn btn-primary btn-lg">Acessar livro</button>
+    </div>
+
+
+</body>
+
+</html>
