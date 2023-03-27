@@ -40,8 +40,9 @@ function closeNav2() {
 }
 
 function whatsApp() {
-    alert("Link de contato");
+    window.location.replace('https://wa.me/71988849111');
 }
+
 
 function anChor() {
     alert("Ancora");
@@ -55,7 +56,6 @@ document.querySelector('form').addEventListener('submit', function (event) {
     var senha = document.querySelector('input[name="senha"]').value;
 
     if (senha === '1234') {
-        alert('Senha correta!'); // Mostra um alerta de sucesso
         window.location.replace("livros.html");
     } else {
         alert('Senha incorreta!'); // Mostra um alerta de erro
