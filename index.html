@@ -176,6 +176,7 @@
             <div class="editora-img">
                 <img src="img/edit1.png" alt="editora">
                 <img src="img/edit2.png" alt="editora">
+                <img src="img/opni.jpg" alt="editora">
             </div>
         </section>
         <section id="content7" class="contato">
@@ -183,10 +184,16 @@
                 <div class="contact">
                     <br>
                     <div class="form2">
-                        <form action="">
+                        <form action="processa-contato.php" method="post">
                             <input type="text" name="nomecontato" placeholder="Nome:" />
+                            <select name="Instituto">
+                                <option value="">Selecione o instituto</option>
+                                <option value="institutoA">Instituto A</option>
+                                <option value="institutoB">Instituto B</option>
+                                <option value="institutoC">Instituto C</option>
+                            </select>
                             <input type="text" name="emailcontato" placeholder="Email:" />
-                            <input type="text" name="telefonecontato" placeholder="Telefone" />
+                            <input type="text" name="telefonecontato" placeholder="Fone (Whatsapp):" />
                             <input type="text" style="height:200px; border-radius: 20px;" name="mensagemcontato"
                                 placeholder="Mensagem:" />
                             <button type="submit" class="btn2">Enviar</button>
@@ -263,10 +270,16 @@
                 <h1 class="cad">Cadastro</h1>
                 <form action="">
                     <input class="inp1" type="text" name="nomecadastro" placeholder="Nome:" />
-                    <input class="inp1" type="text" name="cargocadastro" placeholder="Cargo:" />
+                    <select class="inp1" name="funcaocadastro">
+                        <option value="">Função</option>
+                        <option value="institutoA">SECRETÁRIO(A) DE EDUCAÇÃO</option>
+                        <option value="institutoB">COORDENADOR(A) PEDAGÓGICO
+                        </option>
+                        <option value="institutoC">SUPERINTENDENTE DE ENSINO</option>
+                        <option value="institutoC">PROFESSOR(A)</option>
+                    </select>
                     <input class="inp1" type="text" name="instituicaocadastro" placeholder="Instituição:" />
-                    <input class="inp1" type="text" name="telefonecadastro" placeholder="Telefone:" />
-                    <input class="inp1" type="text" name="emailcadastro" placeholder="Email:" />
+                    <input class="inp1" type="text" name="telefonecadastro" placeholder="Telefone (whatsApp):" />
                     <button type="submit" class="btn5">Cadastrar</button>
                 </form>
             </div>

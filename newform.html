@@ -1,0 +1,66 @@
+<style>
+    .contact {
+        background-image: url(/Pg-Início-mobile/bg-contato_Artboard.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+    }
+
+    .contato-img img {
+        width: 100%;
+    }
+
+
+    .form2 {
+        width: 90%;
+        margin: 0% 5% 0% 5%;
+        padding: 5%;
+        border-radius: 20px;
+        overflow: hidden;
+        color: rgb(80, 223, 255);
+        background: rgba(0, 0, 0, 0.2);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+        border: 1px solid rgba(0, 0, 0, 0.3);
+
+    }
+
+</style>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <section id="content7" class="contato">
+        <div class="contato-img">
+            <div class="contact">
+                <br>
+                <div class="form2">
+                    <form action="processa-contato.php" method="post">
+                        <input type="text" name="nomecontato" placeholder="Nome:" />
+                        <input type="text" name="emailcontato" placeholder="Email:" />
+                        <input type="text" name="telefonecontato" placeholder="Telefone" />
+                        <input type="text" style="height:200px; border-radius: 20px;" name="mensagemcontato"
+                            placeholder="Mensagem:" />
+                        <button type="submit" class="btn2">Enviar</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer">
+                <img src="img/footer.png" alt="contato">
+                <button onclick="whatsApp()" class="btn"></button>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
