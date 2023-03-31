@@ -117,22 +117,22 @@
         <h1>Livros</h1>
         <div class="dropdown">
             <select class="form-control" id="disciplina">
-                <option>Português</option>
-                <option>Matematica</option>
-                <option>Ciências</option>
+                <option value="portugues">Português</option>
+                <option value="matematica">Matemática</option>
+                <option value="ciencias">Ciências</option>
             </select>
         </div>
         <div class="dropdown">
-            <select class="form-control">
-                <option>1º ANO</option>
-                <option>2º ANO</option>
-                <option>3º ANO</option>
-                <option>4º ANO</option>
-                <option>5º ANO</option>
-                <option>6º ANO</option>
-                <option>7º ANO</option>
-                <option>8º ANO</option>
-                <option>9º ANO</option>
+            <select class="form-control" id="ano">
+                <option value="1">1º ANO</option>
+                <option value="2">2º ANO</option>
+                <option value="3">3º ANO</option>
+                <option value="4">4º ANO</option>
+                <option value="5">5º ANO</option>
+                <option value="6">6º ANO</option>
+                <option value="7">7º ANO</option>
+                <option value="8">8º ANO</option>
+                <option value="9">9º ANO</option>
             </select>
         </div>
         <div class="dropdown">
@@ -153,15 +153,10 @@
     $(document).ready(function () {
         $("button").click(function () {
             var disciplina = $("#disciplina").val();
-            var url;
-            if (disciplina === "Português") {
-                url = "pdfviewerP.html";
-            } else if (disciplina === "Matematica") {
-                url = "pdfviewerM.html";
-            } else if (disciplina === "Ciências") {
-                url = "pdfviewer.html";
-            }
+            var ano = $("#ano").val();
+            var url = "pdfviewer" + disciplina.charAt(0).toUpperCase() + ano + ".html";
             window.location.replace(url);
         });
     });
+
 </script>

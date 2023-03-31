@@ -43,6 +43,10 @@ function whatsApp() {
     window.location.replace('https://wa.me/71988849111');
 }
 
+function enviarSenha() {
+    alert("Cadastro finalizado!! A Senha de acesso é: etica1234");
+}
+
 
 function anChor() {
     alert("Ancora");
@@ -55,7 +59,7 @@ document.querySelector('form').addEventListener('submit', function (event) {
 
     var senha = document.querySelector('input[name="senha"]').value;
 
-    if (senha === '1234') {
+    if (senha === 'etica1234') {
         window.location.replace("livros.html");
     } else {
         alert('Senha incorreta!'); // Mostra um alerta de erro
