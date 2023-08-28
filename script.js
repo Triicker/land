@@ -68,12 +68,23 @@ document.querySelector('form').addEventListener('submit', function (event) {
 
 
 
-function iniciarCarousel() {
-    $('#isso').carousel({
-        interval: 1000 // Tempo de duração de cada slide em milissegundos
-    });
-}
-
 $(document).ready(function () {
+    function iniciarCarousel() {
+        $('#isso').carousel({
+            interval: 10000 // Tempo de duração de cada slide em milissegundos
+        });
+    }
+
     iniciarCarousel(); // Inicia o carrossel quando a página carrega
+    
+    // Handle previous and next button clicks
+    $('.carousel-control-prev').click(function (event) {
+        event.preventDefault();
+        $('#isso').carousel('prev');
+    });
+
+    $('.carousel-control-next').click(function (event) {
+        event.preventDefault();
+        $('#isso').carousel('next');
+    });
 });
